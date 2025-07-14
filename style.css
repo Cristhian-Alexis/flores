@@ -1,0 +1,121 @@
+/* Importa la fuente 'Poppins' desde Google Fonts con pesos 500 y 900 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+/* Aplica la fuente Poppins a todos los elementos */
+* {
+    font-family: 'Poppins', cursive;
+}
+
+/* Estilos para el body de la página */
+body {
+    color: azure; /* Texto color azul claro */
+    width: 100%;
+    height: 82vh; /* Ocupa el 82% del alto de la pantalla */
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Apila elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    background-color: black; /* Fondo negro */
+    /* padding-top: -30; */ /* Comentado: no válido, no existe padding negativo */
+}
+
+/* Botones generales */
+.botones {
+    padding: 9px;
+    border-radius: 80px; /* Bordes completamente redondos */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+}
+
+/* Enlaces dentro de los botones */
+.botones a {
+    background-color: #0a2be9; /* Azul eléctrico */
+    padding: 9px;
+    border-radius: 80px; /* Bordes muy redondeados */
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+}
+
+/* Estado de enfoque (al hacer clic o tab) en los enlaces */
+.botones a:focus {
+    background-color: rgb(50, 194, 194); /* Cambia el color a cian al enfocarse */
+}
+
+/* Título principal animado */
+.greetings {
+    font-size: 7rem; /* Tamaño muy grande */
+    font-weight: 900; /* Muy gruesa */
+}
+
+/* Cada letra o palabra dentro de greetings se anima */
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite; /* Aplica la animación de brillo */
+}
+
+/* Definición de la animación "glow" para efecto de brillo */
+@keyframes glow {
+    0%, 100% {
+        color: #fff; /* Blanco */
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6; /* Brillo cian */
+    }
+    10%, 90% {
+        color: #111; /* Casi negro cuando no está brillando*/
+        text-shadow: none; /* Sin brillo */
+    }
+}
+
+/* Delays (retrasos) para hacer que cada letra brille a distinto tiempo */
+.greetings > span:nth-child(2) {
+    animation-delay: .2s;
+}
+.greetings > span:nth-child(3) {
+    animation-delay: .4s;
+}
+.greetings > span:nth-child(4) {
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5) {
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+/* Descripción debajo del título */
+.description {
+    font-size: 1.5rem; /* Tamaño medio */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo de enlaces dentro de .button */
+.button a {
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de texto estándar */
+    color: #111; /* Color oscuro */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 574px) {
+    .greetings {
+        display: block;
+        font-size: 4rem; /* Tamaño más pequeño para móviles */
+        font-weight: 800;
+        text-align: center;
+    }
+    .description {
+        font-size: 2rem; /* Agranda la descripción para móviles */
+    }
+    .button a {
+        font-size: 1rem; /* Mantiene tamaño del botón en móviles */
+    }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
